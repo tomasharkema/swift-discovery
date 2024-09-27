@@ -1,0 +1,44 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "adwaita-swift",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/AparokshaUI/adwaita-swift",
+          "name" : "Adwaita"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "c82957e2398a766458ff22129db26b46de75248b",
+            "version" : "0.2.6"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "adwaita-swift"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "levenshteintransformations",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/david-swift/LevenshteinTransformations",
+          "name" : "LevenshteinTransformations"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "c5665914a26d3f96e1b724acc7254b344acf4d05",
+            "version" : "0.1.2"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "LevenshteinTransformations"
+      }
+    ]
+  },
+  "version" : 6
+}

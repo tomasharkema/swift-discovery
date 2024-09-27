@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "swift-lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-discovery}",
+            "name": "Debug swift-discovery",
+            "program": "${workspaceFolder:swift-discovery}/.vscodebuild/debug/swift-discovery",
+            "preLaunchTask": "swift: Build Debug swift-discovery"
+        },
+        {
+            "type": "swift-lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-discovery}",
+            "name": "Release swift-discovery",
+            "program": "${workspaceFolder:swift-discovery}/.vscodebuild/release/swift-discovery",
+            "preLaunchTask": "swift: Build Release swift-discovery"
+        }
+    ]
+}
