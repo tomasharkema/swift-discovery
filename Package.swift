@@ -25,5 +25,4 @@ let package = Package(
             dependencies: ["swift-discovery"]
         )
     ],
-    swiftLanguageVersions: [SwiftVersion.v5]
 )
