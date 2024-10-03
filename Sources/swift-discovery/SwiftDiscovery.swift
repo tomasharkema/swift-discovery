@@ -1,9 +1,9 @@
 import Adwaita
 
 @main
-struct AdwaitaTemplate: App {
+struct SwiftDiscovery: App {
 
-    let id = "io.github.AparokshaUI.AdwaitaTemplate"
+    let id = "io.harkema.SwiftDiscovery"
     var app: GTUIApp!
 
     var scene: Scene {
@@ -15,6 +15,7 @@ struct AdwaitaTemplate: App {
                 }
         }
         .defaultSize(width: 450, height: 300)
+        
     }
 
 }
