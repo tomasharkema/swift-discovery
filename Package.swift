@@ -8,7 +8,7 @@ let package = Package(
     platforms: [.macOS(.v13)],
     dependencies: [
         .package(url: "https://github.com/AparokshaUI/adwaita-swift", from: "0.2.6"),
-        .package(url: "https://github.com/AparokshaUI/Localized", from: "0.2.0"),
+//        .package(url: "https://github.com/AparokshaUI/Localized", from: "0.2.0"),
         // .package(url: "https://github.com/rhx/gir2swift", branch: "main"),
         // .package(url: "https://github.com/rhx/SwiftGtk",  branch: "gtk4"),
         
@@ -20,7 +20,7 @@ let package = Package(
             name: "swift-discovery",
             dependencies: [
                 .product(name: "Adwaita", package: "adwaita-swift"),
-                .product(name: "Localized", package: "Localized"),
+//                .product(name: "Localized", package: "Localized"),
                 // .product(name: "Gtk", package: "SwiftGtk"),
             ]
         ),
