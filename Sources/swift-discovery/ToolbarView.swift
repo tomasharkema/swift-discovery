@@ -3,8 +3,8 @@ import Adwaita
 struct ToolbarView: View {
 
     @State private var about = false
-    var app: GTUIApp
-    var window: GTUIApplicationWindow
+    let app: GTUIApp
+    let window: GTUIApplicationWindow
 
     var view: Body {
         HeaderBar.end {

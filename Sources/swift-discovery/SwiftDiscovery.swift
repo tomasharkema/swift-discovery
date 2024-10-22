@@ -8,14 +8,13 @@ struct SwiftDiscovery: App {
 
     var scene: Scene {
         Window(id: "main") { window in
-            Text("Hallo")
+          MainView(app: app)
                 .padding()
                 .topToolbar {
                     ToolbarView(app: app, window: window)
                 }
         }
-        .defaultSize(width: 450, height: 300)
-        
+        .defaultSize(width: 450, height: 550)
     }
 
 }
