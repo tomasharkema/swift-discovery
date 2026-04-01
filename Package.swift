@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -8,6 +8,7 @@ let package = Package(
     platforms: [.macOS(.v15)],
     dependencies: [
         .package(url: "https://git.aparoksha.dev/aparoksha/adwaita-swift", branch: "main"),
+        .package(url: "https://github.com/fwcd/swift-dns-service-discovery", branch: "main"),
 //        .package(url: "https://github.com/AparokshaUI/Localized", from: "0.2.0"),
         // .package(url: "https://github.com/rhx/gir2swift", branch: "main"),
         // .package(url: "https://github.com/rhx/SwiftGtk",  branch: "gtk4"),
@@ -20,7 +21,7 @@ let package = Package(
             name: "swift-discovery",
             dependencies: [
                 .product(name: "Adwaita", package: "adwaita-swift"),
-                .product(name: "DNSServiceDiscovery", package: "swift-dns-service-discovery")
+               .product(name: "DNSServiceDiscovery", package: "swift-dns-service-discovery")
 //                .product(name: "Localized", package: "Localized"),
                 // .product(name: "Gtk", package: "SwiftGtk"),
             ]
@@ -33,3 +34,4 @@ let package = Package(
 )
 
 // brew install gtk4 libxml2 atk glib glib-networking gobject-introspection pkg-config libadwaita
+// dnf install swiftlang libadwaita-devel pkg-config avahi-compat-libdns_sd-devel
