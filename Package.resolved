@@ -1,58 +1,13 @@
 {
-  "originHash" : "1573a45f13c1bbf84a13d9770d66b202f661d50a2275a9bfd8dd5e78346ddae8",
+  "originHash" : "f9aed1c96f0e5d7c081e7fcecca5dc7c64bc86ba8a33b45bf2bc3fe0c296f507",
   "pins" : [
     {
-      "identity" : "adwaita-swift",
+      "identity" : "swift-adwaita",
       "kind" : "remoteSourceControl",
-      "location" : "https://git.aparoksha.dev/aparoksha/adwaita-swift",
+      "location" : "https://github.com/makoni/swift-adwaita.git",
       "state" : {
         "branch" : "main",
-        "revision" : "d928b464f1d6cc9c08c7a1bd7ea6be7b1cc51ae9"
-      }
-    },
-    {
-      "identity" : "csqlite",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/stephencelis/CSQLite",
-      "state" : {
-        "revision" : "bdb5580e54cdf49251b365ea34e2651199473240",
-        "version" : "3.50.4"
-      }
-    },
-    {
-      "identity" : "levenshtein-transformations",
-      "kind" : "remoteSourceControl",
-      "location" : "https://git.aparoksha.dev/aparoksha/levenshtein-transformations",
-      "state" : {
-        "branch" : "main",
-        "revision" : "06577a2c4c6419ed859e34a8fb7be87a3b8975da"
-      }
-    },
-    {
-      "identity" : "meta",
-      "kind" : "remoteSourceControl",
-      "location" : "https://git.aparoksha.dev/aparoksha/meta",
-      "state" : {
-        "branch" : "main",
-        "revision" : "f47727df52b1c2b36dec5df1c2bd10dc63e4c7d6"
-      }
-    },
-    {
-      "identity" : "meta-sqlite",
-      "kind" : "remoteSourceControl",
-      "location" : "https://git.aparoksha.dev/aparoksha/meta-sqlite",
-      "state" : {
-        "branch" : "main",
-        "revision" : "6e7940c06a5ac92b10faf5c62b19fb6a02aea59c"
-      }
-    },
-    {
-      "identity" : "sqlite.swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/stephencelis/SQLite.swift",
-      "state" : {
-        "revision" : "964c300fb0736699ce945c9edb56ecd62eba27a3",
-        "version" : "0.16.0"
+        "revision" : "f095b3784286476fcb7a220b16fdad9fcddf10f0"
       }
     },
     {

@@ -7,7 +7,7 @@ let package = Package(
     name: "swift-discovery",
     platforms: [.macOS(.v15)],
     dependencies: [
-        .package(url: "https://git.aparoksha.dev/aparoksha/adwaita-swift", branch: "main"),
+        .package(url: "https://github.com/makoni/swift-adwaita.git", branch: "main"),
         .package(url: "https://github.com/fwcd/swift-dns-service-discovery", branch: "main"),
 //        .package(url: "https://github.com/AparokshaUI/Localized", from: "0.2.0"),
         // .package(url: "https://github.com/rhx/gir2swift", branch: "main"),
@@ -20,7 +20,7 @@ let package = Package(
         .executableTarget(
             name: "swift-discovery",
             dependencies: [
-                .product(name: "Adwaita", package: "adwaita-swift"),
+                .product(name: "Adwaita", package: "swift-adwaita"),
                .product(name: "DNSServiceDiscovery", package: "swift-dns-service-discovery")
 //                .product(name: "Localized", package: "Localized"),
                 // .product(name: "Gtk", package: "SwiftGtk"),

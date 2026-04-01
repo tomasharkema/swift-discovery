@@ -57,13 +57,13 @@
 
       devShells.default = (pkgs.mkShell.override {stdenv = pkgs.swift.stdenv;}) {
         buildInputs = with pkgs; [
-          swift
-          swiftpm
-          swiftpm2nix
+          # swift
+          # swiftpm
+          # swiftpm2nix
           pkg-config
-          swift-format
-          swiftPackages.Foundation
-          swift-corelibs-libdispatch
+          # swift-format
+          # swiftPackages.Foundation
+          # swift-corelibs-libdispatch
         ];
       };
     });
