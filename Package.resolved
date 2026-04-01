@@ -1,10 +1,10 @@
 {
-  "originHash" : "f9aed1c96f0e5d7c081e7fcecca5dc7c64bc86ba8a33b45bf2bc3fe0c296f507",
+  "originHash" : "a5ced14b4b7e214ee9bb2c19188665e1bfce56267c0a94b2011c9a4bbe671b02",
   "pins" : [
     {
       "identity" : "swift-adwaita",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/makoni/swift-adwaita.git",
+      "location" : "https://github.com/makoni/swift-adwaita",
       "state" : {
         "branch" : "main",
         "revision" : "f095b3784286476fcb7a220b16fdad9fcddf10f0"
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-atomics",
       "state" : {
-        "revision" : "cd142fd2f64be2100422d658e7411e39489da985",
-        "version" : "1.2.0"
+        "revision" : "b601256eab081c0f92f059e12818ac1d4f178ff7",
+        "version" : "1.3.0"
       }
     },
     {
@@ -33,8 +33,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log",
       "state" : {
-        "revision" : "9cb486020ebf03bfa5b5df985387a14a98744537",
-        "version" : "1.6.1"
+        "revision" : "8c0f217f01000dd30f60d6e536569ad4e74291f9",
+        "version" : "1.11.0"
       }
     },
     {
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-service-discovery.git",
       "state" : {
-        "revision" : "78cfea3cc8559f86f3db704597c39e5ce27c05be",
-        "version" : "1.3.0"
+        "revision" : "32943ab3fd279d834e2662882286c865c9d58a5e",
+        "version" : "1.4.1"
       }
     }
   ],

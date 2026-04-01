@@ -1,0 +1,80 @@
+app-id: io.harkema.Discovery
+runtime: org.gnome.Platform
+runtime-version: "48"
+sdk: org.gnome.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.swift6
+command: Discovery
+
+finish-args:
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
+  - --system-talk-name=org.freedesktop.Avahi
+
+build-options:
+  append-path: /usr/lib/sdk/swift6/bin
+  prepend-ld-library-path: /usr/lib/sdk/swift6/lib
+
+modules:
+  - name: avahi
+    cleanup:
+    - "/bin"
+    - "/lib/avahi"
+    - "/share/applications/*.desktop"
+    - "/share/avahi"
+    config-opts:
+    - "--with-distro=none"
+    - "--enable-compat-libdns_sd"
+    - "--disable-gobject"
+    - "--disable-introspection"
+    - "--disable-qt3"
+    - "--disable-qt4"
+    - "--disable-qt5"
+    - "--disable-gtk"
+    - "--disable-core-docs"
+    - "--disable-manpages"
+    - "--disable-libdaemon"
+    - "--disable-python"
+    - "--disable-pygobject"
+    - "--disable-mono"
+    - "--disable-monodoc"
+    - "--disable-autoipd"
+    - "--disable-doxygen-doc"
+    - "--disable-doxygen-dot"
+    - "--disable-doxygen-xml"
+    - "--disable-doxygen-html"
+    - "--disable-manpages"
+    - "--disable-xmltoman"
+    sources:
+    - type: archive
+      url: https://www.avahi.org/download/avahi-0.8.tar.gz
+      sha256: '060309d7a333d38d951bc27598c677af1796934dbd98e1024e7ad8de798fedda'
+      x-checker-data:
+        type: anitya
+        project-id: 147
+        url-template: https://www.avahi.org/download/avahi-$version.tar.gz
+    modules:
+    - name: libevent
+      sources:
+      - type: archive
+        url: https://github.com/libevent/libevent/releases/download/release-2.1.12-stable//libevent-2.1.12-stable.tar.gz
+        sha256: 92e6de1be9ec176428fd2367677e61ceffc2ee1cb119035037a27d346b0403bb
+        x-checker-data:
+          type: anitya
+          project-id: 1606
+          url-template: https://github.com/libevent/libevent/releases/download/release-$version-stable//libevent-$version-stable.tar.gz
+
+
+  - name: Discovery
+    buildsystem: simple
+    sources:
+      - type: dir
+        path: .
+    build-commands:
+      - swift build -c release --product Discovery --static-swift-stdlib
+      - install -Dm755 .build/release/Discovery /app/bin/Discovery
+      - install -Dm644 io.harkema.Discovery.desktop /app/share/applications/io.harkema.Discovery.desktop
+      - install -Dm644 io.harkema.Discovery.metainfo.xml /app/share/metainfo/io.harkema.Discovery.metainfo.xml
+      - install -Dm644 io.harkema.Discovery.svg /app/share/icons/hicolor/scalable/apps/io.harkema.Discovery.svg

@@ -18,3 +18,5 @@ devenv.local.nix
 .pre-commit-config.yaml
 
 .vscodebuild
+
+.flatpak-builder
