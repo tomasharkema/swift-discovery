@@ -3,28 +3,29 @@ import Adwaita
 struct ToolbarView: View {
 
     @State private var about = false
-    let app: GTUIApp
-    let window: GTUIApplicationWindow
+
+    var app: AdwaitaApp
+    var window: AdwaitaWindow
 
     var view: Body {
         HeaderBar.end {
-            Menu(icon: .default(icon: .openMenu), app: app, window: window) {
-                MenuButton("New Window", window: false) {
-                    app.addWindow("main")
-                }
-                .keyboardShortcut("n".ctrl())
-                MenuButton("Close Window") {
-                    window.close()
-                }
-                .keyboardShortcut("w".ctrl())
+            Menu(icon: .default(icon: .openMenu)) {
+//                MenuButton("New Window", window: false) {
+//                    app.addWindow("main")
+//                }
+//                .keyboardShortcut("n".ctrl())
+//                MenuButton("Close Window") {
+//                    window.close()
+//                }
+//                .keyboardShortcut("w".ctrl())
                 MenuSection {
-                    MenuButton("ABOUT", window: false) {
+                    MenuButton("About", window: false) {
                         about = true
                     }
                 }
             }
             .primary()
-            .tooltip("MAIN MENU")
+            .tooltip("Main Menu")
             .aboutDialog(
                 visible: $about,
                 app: "AdwaitaTemplate",

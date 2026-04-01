@@ -2,9 +2,7 @@ import Adwaita
 
 @main
 struct SwiftDiscovery: App {
-
-    let id = "io.harkema.SwiftDiscovery"
-    var app: GTUIApp!
+    let app = AdwaitaApp(id: "io.harkema.SwiftDiscovery")
 
     var scene: Scene {
         Window(id: "main") { window in
@@ -16,5 +14,4 @@ struct SwiftDiscovery: App {
         }
         .defaultSize(width: 450, height: 550)
     }
-
 }

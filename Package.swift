@@ -5,10 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "swift-discovery",
-    platforms: [.macOS(.v13)],
+    platforms: [.macOS(.v15)],
     dependencies: [
-        .package(url: "https://github.com/AparokshaUI/adwaita-swift", from: "0.2.6"),
-        .package(url: "https://github.com/fwcd/swift-dns-service-discovery", branch: "main"),
+        .package(url: "https://git.aparoksha.dev/aparoksha/adwaita-swift", branch: "main"),
 //        .package(url: "https://github.com/AparokshaUI/Localized", from: "0.2.0"),
         // .package(url: "https://github.com/rhx/gir2swift", branch: "main"),
         // .package(url: "https://github.com/rhx/SwiftGtk",  branch: "gtk4"),
