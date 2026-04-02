@@ -6,7 +6,7 @@ struct SwiftDiscovery: App {
 
     var scene: Scene {
         Window(id: "main") { window in
-          MainView(app: app)
+            MainView(app: app)
                 .padding()
                 .topToolbar {
                     ToolbarView(app: app, window: window)

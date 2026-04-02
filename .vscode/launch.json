@@ -17,6 +17,26 @@
             "name": "Release swift-discovery",
             "program": "${workspaceFolder:swift-discovery}/.vscodebuild/release/swift-discovery",
             "preLaunchTask": "swift: Build Release swift-discovery"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-discovery}",
+            "name": "Debug Discovery",
+            "target": "Discovery",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug Discovery"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-discovery}",
+            "name": "Release Discovery",
+            "target": "Discovery",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release Discovery"
         }
     ]
 }

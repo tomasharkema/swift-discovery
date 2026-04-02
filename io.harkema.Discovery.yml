@@ -1,6 +1,6 @@
 app-id: io.harkema.Discovery
 runtime: org.gnome.Platform
-runtime-version: "48"
+runtime-version: "49"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.swift6
@@ -11,7 +11,9 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --device=dri
-  - --system-talk-name=org.freedesktop.Avahi
+  - --socket=system-bus
+  - --socket=session-bus
+#  - --system-talk-name=org.freedesktop.Avahi
 
 build-options:
   append-path: /usr/lib/sdk/swift6/bin
@@ -69,12 +71,13 @@ modules:
 
   - name: Discovery
     buildsystem: simple
+    builddir: true
     sources:
       - type: dir
         path: .
     build-commands:
-      - swift build -c release --product Discovery --static-swift-stdlib
-      - install -Dm755 .build/release/Discovery /app/bin/Discovery
-      - install -Dm644 io.harkema.Discovery.desktop /app/share/applications/io.harkema.Discovery.desktop
-      - install -Dm644 io.harkema.Discovery.metainfo.xml /app/share/metainfo/io.harkema.Discovery.metainfo.xml
-      - install -Dm644 io.harkema.Discovery.svg /app/share/icons/hicolor/scalable/apps/io.harkema.Discovery.svg
+      - swift build -c debug --product Discovery --static-swift-stdlib
+      - install -Dm755 .build/debug/Discovery /app/bin/Discovery
+      #- install -Dm644 io.harkema.Discovery.desktop /app/share/applications/io.harkema.Discovery.desktop
+      #- install -Dm644 io.harkema.Discovery.metainfo.xml /app/share/metainfo/io.harkema.Discovery.metainfo.xml
+      #- install -Dm644 io.harkema.Discovery.svg /app/share/icons/hicolor/scalable/apps/io.harkema.Discovery.svg

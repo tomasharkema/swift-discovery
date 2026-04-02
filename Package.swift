@@ -5,10 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "swift-discovery",
-    platforms: [.macOS(.v15)],
+    platforms: [.macOS(.v26)],
     dependencies: [
-        .package(url: "https://github.com/makoni/swift-adwaita", branch: "main"),
-        .package(url: "https://github.com/fwcd/swift-dns-service-discovery", branch: "main"),
+        .package(url: "https://git.aparoksha.dev/aparoksha/adwaita-swift", branch: "main"),
+        .package(url: "https://github.com/fwcd/swift-dns-service-discovery", branch: "linux"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -16,10 +16,10 @@ let package = Package(
         .executableTarget(
             name: "Discovery",
             dependencies: [
-                .product(name: "Adwaita", package: "swift-adwaita"),
-               .product(name: "DNSServiceDiscovery", package: "swift-dns-service-discovery"),
+                .product(name: "Adwaita", package: "adwaita-swift"),
+                .product(name: "DNSServiceDiscovery", package: "swift-dns-service-discovery"),
             ]
-        ),
+        )
     ]
 )
 

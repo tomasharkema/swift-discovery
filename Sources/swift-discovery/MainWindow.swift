@@ -1,9 +1,8 @@
-
 import Adwaita
 
 struct MainView: View {
 
-    let app: GTUIApp
+    let app: AdwaitaApp
 
     let list = ["a", "b"]
 
@@ -12,9 +11,9 @@ struct MainView: View {
             Text($0)
         }.onAppear {
             print("ON APPEAR!")
-            Task { 
+            Task {
                 await DiscoveryService.shared.start()
-            }  
+            }
         }
     }
 }
@@ -24,4 +23,3 @@ extension String: Identifiable {
         hashValue
     }
 }
-
