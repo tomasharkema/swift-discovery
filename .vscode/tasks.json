@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "swift",
+			"args": [
+				"build",
+				"--product",
+				"Discovery"
+			],
+			"env": {},
+			"cwd": "/workspaces/swift-discovery",
+			"disableTaskQueue": true,
+			"dontTriggerTestDiscovery": true,
+			"group": "build",
+			"problemMatcher": [],
+			"label": "swift: Build Debug Discovery",
+			"detail": "swift build --product Discovery"
+		}
+	]
+}

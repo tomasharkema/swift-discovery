@@ -1,16 +1,13 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
   "name": "Swift",
-  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "swift:6.3",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
-      "installZsh": "false",
+      // "installZsh": "false",
       // "username": "vscode",
       // "userUid": "1000",
       // "userGid": "1000",
-      "upgradePackages": "false"
+      // "upgradePackages": "false"
     },
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
       "packages": "libavahi-compat-libdnssd-dev,libadwaita-1-dev,libadwaita-1.0,pkg-config"
