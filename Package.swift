@@ -23,5 +23,5 @@ let package = Package(
     ]
 )
 
-// brew install gtk4 libxml2 atk glib glib-networking gobject-introspection pkg-config libadwaita
+// brew install gtk4 libxml2 atk glib glib-networking gobject-introspection pkgcon libadwaita
 // dnf install swiftlang libadwaita-devel pkg-config avahi-compat-libdns_sd-devel
