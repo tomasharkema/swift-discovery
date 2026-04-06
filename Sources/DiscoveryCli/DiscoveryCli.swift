@@ -4,7 +4,8 @@ import SwiftTUI
 
 @main
 struct DiscoveryCli {
-    static func main() {
-        Application(rootView: ServicesView()).start()
-    }
+  static func main() {
+    Application(rootView: ServicesView()).start()
+  }
 }
+
