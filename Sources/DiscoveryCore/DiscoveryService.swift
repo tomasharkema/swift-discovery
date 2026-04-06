@@ -3,22 +3,24 @@ import Dispatch
 import Foundation
 import ServiceDiscovery
 
-final actor DiscoveryService {
+public final class DiscoveryService {
 
-    static let shared = DiscoveryService()
+    @MainActor
+    public static let shared = DiscoveryService()
 
     private let dns = DNSServiceDiscovery()
     private var token: CancellationToken?
 
     // @State
-    private(set) var hosts: [String] = []
+    @MainActor
+    public private(set) var hosts: [String] = []
 
-    func start() {
+    public func start() {
         print("START!")
         token = dns.subscribe(
             to: DNSServiceQuery(type: .dnsSdServices),
-            onNext: { result in
-                print(result)
+            onNext: { [weak self] result in
+                self?.handle(result: result)
             },
             onComplete: {
                 print($0)

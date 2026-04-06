@@ -1,4 +1,5 @@
 import Adwaita
+import DiscoveryCore
 
 struct MainView: View {
 
@@ -12,7 +13,9 @@ struct MainView: View {
         }.onAppear {
             print("ON APPEAR!")
             Task {
-                await DiscoveryService.shared.start()
+                await MainActor.run {
+                    DiscoveryService.shared.start()
+                }
             }
         }
     }
