@@ -3,48 +3,53 @@ import Dispatch
 import Foundation
 import ServiceDiscovery
 
-public final class DiscoveryService {
+public final class DiscoveryService: Sendable {
 
     @MainActor
     public static let shared = DiscoveryService()
 
     private let dns = DNSServiceDiscovery()
-    private var token: CancellationToken?
+    // private var token: CancellationToken?
 
+    // needs Adwaita, which polutes this lib. How to make reactive without depending on Adwaita?
+    // maybe only make this service "polling"
     // @State
     @MainActor
-    public private(set) var hosts: [String] = []
+    public private(set) var services: [DnsService] = []
 
-    public func start() {
-        print("START!")
-        token = dns.subscribe(
-            to: DNSServiceQuery(type: .dnsSdServices),
-            onNext: { [weak self] result in
-                self?.handle(result: result)
-            },
-            onComplete: {
-                print($0)
-            })
-    }
-
-    private func handle(result: Result<[DNSServiceInstance], any Error>) {
-        switch result {
-        case .success(let instances):
-            handle(instances: instances)
-        case .failure(let error):
-            print("Caught error:", error)
+    public func start() async {
+        // print("START!")
+        do {
+            let instances = try await dns.lookup(DNSServiceQuery(type: .dnsSdServices))
+            await self.handle(instances: instances)
+        } catch {
+            // print("Error: \(error)")
         }
     }
 
-    private func handle(instances: [DNSServiceInstance]) {
+    private func handle(instances: [DNSServiceInstance]) async {
         for instance in instances {
-            print("SERVICE:")
-            print("NAME: \(instance.name) \(instance.domain)")
-            print("INFO: \(instance)")
+            let service = DnsService(name: instance.name)
+            // print("SERVICE:")
+            // print("NAME: \(instance.name) \(instance.domain)")
+            // print("INFO: \(instance)")
+            // print("===")
+            await handle(service: service)
+        }
+    }
+
+    private func handle(service: DnsService) async {
+        await handleMainActor(service: service)
+    }
+
+    @MainActor
+    private func handleMainActor(service: DnsService) {
+        if !services.contains(service) {
+            services.append(service)
         }
     }
 
     deinit {
-        print("DEINIT!")
+        // print("DEINIT!")
     }
 }

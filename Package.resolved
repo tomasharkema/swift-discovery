@@ -1,5 +1,5 @@
 {
-  "originHash" : "f7f659f536e6c21818112300cf4ac2e1a18e3c3efa7ed1f5f400e91b7fad233c",
+  "originHash" : "234a5969813ad4e49416aa096c087e85fe387d806dfa401517d53133c6ce4211",
   "pins" : [
     {
       "identity" : "adwaita-swift",
@@ -8,15 +8,6 @@
       "state" : {
         "branch" : "main",
         "revision" : "d928b464f1d6cc9c08c7a1bd7ea6be7b1cc51ae9"
-      }
-    },
-    {
-      "identity" : "csqlite",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/stephencelis/CSQLite",
-      "state" : {
-        "revision" : "bdb5580e54cdf49251b365ea34e2651199473240",
-        "version" : "3.50.4"
       }
     },
     {
@@ -89,6 +80,15 @@
       "state" : {
         "revision" : "32943ab3fd279d834e2662882286c865c9d58a5e",
         "version" : "1.4.1"
+      }
+    },
+    {
+      "identity" : "swifttui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/DandyLyons/SwiftTUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "537133031bc2b2731048d00748c69700e1b48185"
       }
     }
   ],

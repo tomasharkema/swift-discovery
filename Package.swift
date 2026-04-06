@@ -9,12 +9,20 @@ let package = Package(
     dependencies: [
         .package(url: "https://git.aparoksha.dev/aparoksha/adwaita-swift", branch: "main"),
         .package(url: "https://github.com/fwcd/swift-dns-service-discovery", branch: "linux"),
+        .package(url: "https://github.com/DandyLyons/SwiftTUI", branch: "main"),
     ],
     targets: [
         .target(
             name: "DiscoveryCore",
             dependencies: [
                 .product(name: "DNSServiceDiscovery", package: "swift-dns-service-discovery")
+            ]),
+        .executableTarget(
+            name: "DiscoveryCli",
+            dependencies: [
+                "DiscoveryCore",
+                "SwiftTUI",
+                .product(name: "DNSServiceDiscovery", package: "swift-dns-service-discovery"),
             ]),
         .executableTarget(
             name: "Discovery",

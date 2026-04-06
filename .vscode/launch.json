@@ -1,42 +1,44 @@
 {
-    "configurations": [
-        {
-            "type": "lldb",
-            "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:swift-discovery}",
-            "name": "Debug swift-discovery",
-            "program": "${workspaceFolder:swift-discovery}/.vscodebuild/debug/swift-discovery",
-            "preLaunchTask": "swift: Build Debug swift-discovery"
-        },
-        {
-            "type": "lldb",
-            "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:swift-discovery}",
-            "name": "Release swift-discovery",
-            "program": "${workspaceFolder:swift-discovery}/.vscodebuild/release/swift-discovery",
-            "preLaunchTask": "swift: Build Release swift-discovery"
-        },
-        {
-            "type": "swift",
-            "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:swift-discovery}",
-            "name": "Debug Discovery",
-            "target": "Discovery",
-            "configuration": "debug",
-            "preLaunchTask": "swift: Build Debug Discovery"
-        },
-        {
-            "type": "swift",
-            "request": "launch",
-            "args": [],
-            "cwd": "${workspaceFolder:swift-discovery}",
-            "name": "Release Discovery",
-            "target": "Discovery",
-            "configuration": "release",
-            "preLaunchTask": "swift: Build Release Discovery"
-        }
-    ]
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-discovery}",
+      "name": "Debug DiscoveryCli",
+      "target": "DiscoveryCli",
+      "configuration": "debug",
+      "preLaunchTask": "swift: Build Debug DiscoveryCli"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-discovery}",
+      "name": "Release DiscoveryCli",
+      "target": "DiscoveryCli",
+      "configuration": "release",
+      "preLaunchTask": "swift: Build Release DiscoveryCli"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-discovery}",
+      "name": "Debug Discovery",
+      "target": "Discovery",
+      "configuration": "debug",
+      "preLaunchTask": "swift: Build Debug Discovery"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:swift-discovery}",
+      "name": "Release Discovery",
+      "target": "Discovery",
+      "configuration": "release",
+      "preLaunchTask": "swift: Build Release Discovery"
+    }
+  ]
 }

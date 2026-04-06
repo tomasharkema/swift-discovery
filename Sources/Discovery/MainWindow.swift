@@ -13,9 +13,8 @@ struct MainView: View {
         }.onAppear {
             print("ON APPEAR!")
             Task {
-                await MainActor.run {
-                    DiscoveryService.shared.start()
-                }
+                await DiscoveryService.shared.start()
+
             }
         }
     }
