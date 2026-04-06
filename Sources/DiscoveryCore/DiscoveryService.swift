@@ -1,4 +1,3 @@
-import Adwaita
 import DNSServiceDiscovery
 import Dispatch
 import Foundation
@@ -11,7 +10,7 @@ final actor DiscoveryService {
     private let dns = DNSServiceDiscovery()
     private var token: CancellationToken?
 
-    @State
+    // @State
     private(set) var hosts: [String] = []
 
     func start() {
@@ -46,5 +45,4 @@ final actor DiscoveryService {
     deinit {
         print("DEINIT!")
     }
-
 }

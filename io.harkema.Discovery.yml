@@ -1,6 +1,6 @@
 app-id: io.harkema.Discovery
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: "50"
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.swift6
@@ -76,7 +76,7 @@ modules:
       - type: dir
         path: .
     build-commands:
-      - swift build -c debug --product Discovery --static-swift-stdlib
+      - swift build -c release --product Discovery --static-swift-stdlib
       - install -Dm755 .build/debug/Discovery /app/bin/Discovery
       #- install -Dm644 io.harkema.Discovery.desktop /app/share/applications/io.harkema.Discovery.desktop
       #- install -Dm644 io.harkema.Discovery.metainfo.xml /app/share/metainfo/io.harkema.Discovery.metainfo.xml

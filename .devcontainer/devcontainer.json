@@ -2,15 +2,15 @@
   "name": "Swift",
   "image": "swift:6.3",
   "features": {
-    "ghcr.io/devcontainers/features/common-utils:2": {
-      // "installZsh": "false",
-      // "username": "vscode",
-      // "userUid": "1000",
-      // "userGid": "1000",
-      // "upgradePackages": "false"
-    },
+    // "ghcr.io/devcontainers/features/common-utils:2": {
+    //   "installZsh": "false",
+    //   "username": "vscode",
+    //   "userUid": "1000",
+    //   "userGid": "1000",
+    //   "upgradePackages": "false"
+    // },
     "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-      "packages": "libavahi-compat-libdnssd-dev,libadwaita-1-dev,libadwaita-1.0,pkg-config"
+      "packages": "libavahi-compat-libdnssd1,libavahi-compat-libdnssd-dev,libadwaita-1-dev,libadwaita-1.0,pkg-config"
     },
     "ghcr.io/devcontainers/features/git:1": {
       "version": "os-provided",
