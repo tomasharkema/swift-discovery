@@ -10,11 +10,15 @@ struct ServicesView: @MainActor View {
 
     var body: some View {
         if vm.services.count > 0 {
-            Text("Bonjour services:\n")
-            ScrollView {
-                ForEach(vm.services) { service in
-                    Text(service.name)
-                    Text("===")
+            VStack {
+                Text("Bonjour services:\n")
+                ScrollView {
+                    ForEach(vm.services) { service in
+                        VStack {
+                            Text(service.name)
+                            Text("===")
+                        }
+                    }
                 }
             }
         } else {
