@@ -1,5 +1,5 @@
 {
-  "originHash" : "234a5969813ad4e49416aa096c087e85fe387d806dfa401517d53133c6ce4211",
+  "originHash" : "6945962534bc6775741e7537b752504221887ae7dc2d4be5fb2f20d70d60a975",
   "pins" : [
     {
       "identity" : "adwaita-swift",
@@ -88,7 +88,7 @@
       "location" : "https://github.com/DandyLyons/SwiftTUI",
       "state" : {
         "branch" : "main",
-        "revision" : "537133031bc2b2731048d00748c69700e1b48185"
+        "revision" : "73a926f1d13aada156e09f928af7191fb687336c"
       }
     }
   ],
